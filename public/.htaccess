@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /
+
+# Allow access to existing files and directories
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect all other requests to 200.html
+
+RewriteRule ^ 200.html [QSA,L]
